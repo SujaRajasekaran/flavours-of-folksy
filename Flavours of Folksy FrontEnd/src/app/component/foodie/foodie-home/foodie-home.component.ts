@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrl: './foodie-home.component.css'
 })
 export class FoodieHomeComponent {
-  gotoLogin() :void{
+gotoLogin() :void{
     this.route.navigate(['/login']);
   }
   
@@ -15,5 +15,10 @@ export class FoodieHomeComponent {
   }
   
   ngOnInit(): void {
+  }
+  selectedMeal: string = 'veg_meal';
+
+  selectMeal(mealId: string) {
+    this.selectedMeal = mealId;
   }
 }
